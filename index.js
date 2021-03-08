@@ -11,7 +11,7 @@ const argv = yargs(hideBin(process.argv)).argv
 
 function convert(inputDir, outputDir, file) {
   const input = path.resolve(inputDir, file)
-  const output = path.resolve(outputDir, file.replace('.obj', '.gltf')
+  const output = path.resolve(outputDir, file.replace('.obj', '.gltf'))
   console.log(`converting ${input}`)
   return obj2gltf(input, { separate: true, outputDirectory: outputDir })
     .then(function (gltf) {
